@@ -18,7 +18,7 @@ describe('Emirates Flights Automation Test demo', () => {
         });
 
 
-    it('destination and fligt selection',function(){
+    it('Lifecycle demo',function(){
         homepage.visit();
         homepage.acceptCookies();
         homepage.selectDestination(this.user.destination);
