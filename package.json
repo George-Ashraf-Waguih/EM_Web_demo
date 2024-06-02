@@ -4,7 +4,11 @@
   "description": "Web Automation demo using Cypress",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:chrome": "cypress run --browser chrome",
+    "test:firefox": "cypress run --browser firefox",
+    "test:edge": "cypress run --browser edge",
+    "test:all": "npm run test:chrome && npm run test:firefox && npm run test:edge"
   },
   "author": "George Ashraf",
   "license": "ISC",
