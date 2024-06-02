@@ -9,6 +9,7 @@
   "author": "George Ashraf",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.14.0"
+    "cypress": "^12.14.0",
+    "cypress-mochawesome-reporter": "^3.8.2"
   }
 }
