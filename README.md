@@ -14,3 +14,5 @@ This framework uses:
 - Fixtures to be tested by multiple inputs that can be added to the json fixture file (fixture file is added in the fixtures folder)
 
 + Can be added to the jenkins CI pipeline
+
++ Reports are included and can be used in html format 
