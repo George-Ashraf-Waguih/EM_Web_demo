@@ -28,17 +28,33 @@ class HomePage {
         // return should be after 60 days regardless the date 
         const today = new Date();
         const date = new Date();
-        var departureDay= date.getDate()            // setting departure date to be today
-        const returnDate = new Date();
-        returnDate.setDate(date.getDate() + 60);    // setting return date 60 days from today 
-        cy.get(this.departureDay).contains(departureDay.toString()).click() 
+        var departureDate = new Date();
+        // var departureDate= date.getDate()            
+        departureDate.setDate(date.getDate()+1)         // setting departure date to be tomorrow
+        var departureDay = departureDate.getDate()
+
+        //cy.get(this.departureDay).contains(departureDay.toString()).click() 
+        cy.log(departureDay)
+        cy.get('td').filter((index, element) => {
+            return Cypress.$(element).text().trim() === departureDay.toString();
+          }).first().click();
+        
+        var returnDate = new Date();
+        returnDate.setDate(date.getDate() + 60); // setting return date 60 days from tomorrow 
+        var returnDay = returnDate.getDate()
+        // var returnDay = new Date();    
+        // returnDay = date.setDate(date.getDate()+60)
 
         const monthsDifference = (returnDate.getFullYear() - today.getFullYear()) * 12 + (returnDate.getMonth() - today.getMonth());
         for (let i = 0; i < monthsDifference; i++) {
             cy.get(this.nextMonthBtn).click({multiple:true})
         }
         
-        cy.get(this.returnDate).contains(returnDate.getDate().toString()).click() 
+        // cy.get(this.returnDate).contains(returnDate.getDate().toString()).click() 
+        cy.log(returnDay.toString())
+        cy.get('td').filter((index, element) => {
+            return Cypress.$(element).text().trim() === returnDay.toString();
+          }).first().click();
 
     }
 
