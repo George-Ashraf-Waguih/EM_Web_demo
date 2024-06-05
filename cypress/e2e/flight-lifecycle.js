@@ -1,9 +1,10 @@
 /// <reference types="cypress" />
 
-import Accessrestrictpage from '../support/pageObjects/Accessrestictpage';
-import HomePage from '../support/pageObjects/Homepage';
-import Passengerpage from '../support/pageObjects/Passengerpage';
-import Pricepage from '../support/pageObjects/Pricepage';
+
+import Accessrestrictpage from '../support/pageObjects/Lifecycle/Accessrestictpage';
+import HomePage from '../support/pageObjects/Lifecycle/Homepage';
+import Passengerpage from '../support/pageObjects/Lifecycle/Passengerpage';
+import Pricepage from '../support/pageObjects/Lifecycle/Pricepage';
 
 describe('Emirates Flights Automation Test demo', () => {
     
@@ -15,11 +16,12 @@ describe('Emirates Flights Automation Test demo', () => {
     
     beforeEach(function() {
         cy.fixture('passengerDetails').as('user');
+        homepage.visit();
         });
 
 
     it('Lifecycle demo',function(){
-        homepage.visit();
+        
         homepage.acceptCookies();
         homepage.selectDestination(this.user.destination);
         homepage.selectDates();

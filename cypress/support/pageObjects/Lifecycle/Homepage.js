@@ -8,6 +8,7 @@ class HomePage {
     returnDate = '.eol-calendar--visible > .ek-datepicker__holder > .ek-datepicker > :nth-child(2)';
     nextMonthBtn = '.eol-calendar--visible > .ek-datepicker__holder > .ek-datepicker > :nth-child(3) > .ek-datepicker__column-title > .ek-datepicker__button';
     continueBtn = '.js-widget-submit';
+    loginBtn = '.account-username'
 
     // Methods
     visit() {
@@ -61,6 +62,10 @@ class HomePage {
     clickOnContinue() {
 
         cy.get(this.continueBtn).first().click()
+    }
+
+    clickOnLogin() {
+        cy.get(this.loginBtn).click({force:true})
     }
     
 }

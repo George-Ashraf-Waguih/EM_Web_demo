@@ -1,0 +1,7 @@
+{
+    "username" : "testuser",
+    "password" : "testpass",
+    "usernameMissingError" : "Email address or Emirates Skywards number: This is a mandatory field, please check and try again.",
+    "passwordMissingError" : "Password: This is a mandatory field, please check and try again.",
+    "wrongUserOrPassError" : "Sorry, the email address, Emirates Skywards number or password you entered is incorrect. Please check and try again."
+}
