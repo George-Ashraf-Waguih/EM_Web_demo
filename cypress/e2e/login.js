@@ -38,16 +38,13 @@ describe('Login tests', () => {
         
     });
 
-    it.only('Negative - Wrong username and password', function() {
+    it('Negative - Wrong username and password', function() {
         
         loginPage.enterUsername(this.loginData.username)
         loginPage.enterPassword(this.loginData.password)
         loginPage.clickOnLogin();
         loginPage.verifyErrorMessage(this.loginData.wrongUserOrPassError)
-        // cy.get('#sso-email').type('Test')
-        // cy.get('#sso-password_label').type('Test')
-        // cy.get('#login-button').click()
-        // cy.get('.login-error').should('contain.text','Sorry, the email address, Emirates Skywards number or password you entered is incorrect. Please check and try again.')
+        
     });
 
     
