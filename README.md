@@ -1,19 +1,21 @@
-# Emirates_flight_selection_demo
+# Emirates demo
 Complete robust framework covering the following:
+    
     - Negative Login scenarios: 
-        - No email and no password
-        - No email 
-        - No password
-        - Wrong email or password 
+        1- No email and no password
+        2- No email 
+        3- No password
+        4- Wrong email or password 
+
     - Flights selection Lifecycle: 
-        -  Navigating to the homepage
-        -  Selecting flight destination
-        -  Selecting departure date (today)
-        -  Selecting return date (30 days from today regardless the month[handled by Date])
-        -  Selecting departure flight
-        -  Selecting return flight
-        -  Entering Passenger Details
-        -  Entering Contact Details
+        1-  Navigating to the homepage
+        2-  Selecting flight destination
+        3-  Selecting departure date (today)
+        4-  Selecting return date (30 days from today regardless the month[handled by Date])
+        5-  Selecting departure flight
+        6-  Selecting return flight
+        7-  Entering Passenger Details
+        8-  Entering Contact Details
 
 This framework uses:
 - The POM approach to make it easily modified for future changes. (all pages are added in the pageObjects folder)
