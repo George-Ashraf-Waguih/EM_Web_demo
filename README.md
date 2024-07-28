@@ -1,5 +1,5 @@
 # Emirates demo
-Complete robust framework covering the following:
+Complete cypress robust framework covering the following:
     
     - Negative Login scenarios: 
         1- No email and no password

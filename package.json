@@ -4,7 +4,7 @@
   "description": "Web Automation demo using Cypress",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "triggerAllTests-headless": "npx cypres run",
     "test:chrome": "cypress run --browser chrome",
     "test:firefox": "cypress run --browser firefox",
     "test:edge": "cypress run --browser edge",
